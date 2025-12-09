@@ -1,0 +1,22 @@
+services:
+  - type: web
+    name: evolution-api
+    runtime: docker
+    dockerfilePath: ./Dockerfile
+    plan: starter
+    healthCheckPath: /
+    envVars:
+      - key: SERVER_URL
+        sync: false
+      - key: AUTHENTICATION_API_KEY
+        sync: false
+      - key: WEBHOOK_GLOBAL_URL
+        sync: false
+      - key: WEBHOOK_GLOBAL_ENABLED
+        value: "true"
+      - key: WEBHOOK_GLOBAL_WEBHOOK_BY_EVENTS
+        value: "true"
+      - key: WEBHOOK_EVENTS_MESSAGES_UPSERT
+        value: "true"
+      - key: WEBHOOK_EVENTS_CONNECTION_UPDATE
+        value: "true"
