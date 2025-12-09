@@ -6,10 +6,8 @@ ENV AUTHENTICATION_TYPE=apikey
 ENV AUTHENTICATION_API_KEY=confirma-party-api-key-2024
 ENV AUTHENTICATION_EXPOSE_IN_FETCH_INSTANCES=true
 
-# Database (usando SQLite para simplicidade)
-ENV DATABASE_ENABLED=true
-ENV DATABASE_PROVIDER=sqlite
-ENV DATABASE_CONNECTION_URI=file:./prisma/evolution.db
+# Database desabilitado (usa armazenamento local)
+ENV DATABASE_ENABLED=false
 
 # Configurações de instância
 ENV DEL_INSTANCE=false
