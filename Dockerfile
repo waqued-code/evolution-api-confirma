@@ -6,8 +6,10 @@ ENV AUTHENTICATION_TYPE=apikey
 ENV AUTHENTICATION_API_KEY=confirma-party-api-key-2024
 ENV AUTHENTICATION_EXPOSE_IN_FETCH_INSTANCES=true
 
-# Database desabilitado (usa armazenamento local)
-ENV DATABASE_ENABLED=false
+# Database PostgreSQL (configurado via variável de ambiente no Render)
+ENV DATABASE_ENABLED=true
+ENV DATABASE_PROVIDER=postgresql
+# DATABASE_CONNECTION_URI será definida no Render Dashboard
 
 # Configurações de instância
 ENV DEL_INSTANCE=false

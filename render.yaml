@@ -10,6 +10,10 @@ services:
         sync: false
       - key: AUTHENTICATION_API_KEY
         sync: false
+      - key: DATABASE_CONNECTION_URI
+        fromDatabase:
+          name: evolution-db
+          property: connectionString
       - key: WEBHOOK_GLOBAL_URL
         sync: false
       - key: WEBHOOK_GLOBAL_ENABLED
@@ -20,3 +24,9 @@ services:
         value: "true"
       - key: WEBHOOK_EVENTS_CONNECTION_UPDATE
         value: "true"
+
+databases:
+  - name: evolution-db
+    plan: free
+    databaseName: evolution
+    user: evolution
