@@ -11,6 +11,11 @@ ENV DATABASE_ENABLED=true
 ENV DATABASE_PROVIDER=postgresql
 # DATABASE_CONNECTION_URI será definida no Render Dashboard
 
+# Redis desabilitado
+ENV CACHE_REDIS_ENABLED=false
+ENV CACHE_REDIS_URI=
+ENV CACHE_LOCAL_ENABLED=true
+
 # Configurações de instância
 ENV DEL_INSTANCE=false
 ENV CONFIG_SESSION_PHONE_CLIENT=Confirma.Party
